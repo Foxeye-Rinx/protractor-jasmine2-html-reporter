@@ -1,3 +1,4 @@
+let chromeDriverPath = process.platform === "win32" ? "node_modules/chromedriver/lib/chromedriver/chromedriver.exe" : "node_modules/chromedriver/bin/chromedriver";
 // An example configuration file
 exports.config = {
 
@@ -8,6 +9,8 @@ exports.config = {
     framework: 'jasmine2',
 
     directConnect: true,
+    
+    chromeDriver: chromeDriverPath,
 
     specs: ['test/**/*[sS]pec.js'],
 
